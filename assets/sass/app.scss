@@ -1,0 +1,20 @@
+@use "base/normalize";
+@use "base/fonts";
+@use "abstracts/variables";
+@use "abstracts/mixin";
+
+@use "components/root";
+@use "components/header";
+@use "components/cover";
+@use "components/about";
+@use "components/staff";
+@use "components/edujob";
+@use "components/reviews";
+@use "components/partners";
+@use "components/contacts";
+@use "components/footer";
+@use "components/carousel";
+@use "components/icons";
+@use "components/activities";
+
+// Для подключения

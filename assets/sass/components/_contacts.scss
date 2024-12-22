@@ -1,0 +1,54 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.contacts {
+  @include mixin.max-w;
+  margin-top: 7.125rem; /* 114px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: variables.$ff;
+  
+  .contacts__wrap-text {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .contacts__text {
+    margin-bottom: 0;
+    @include mixin.title;
+    @include mixin.title-h2; 
+    text-align: center;
+  }
+  .contacts__wrap-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .contacts__button {
+    height: 1.6875rem; /* 27px */
+    min-width: 7.625rem; /* 122px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem 0 0.5rem;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 180px;
+    background: variables.$bg-darkblue;
+      
+  }
+  .contacts__button a {
+    @include mixin.text;
+    font-size: variables.$fs-btn;
+    color: variables.$text-color-btn;
+  }
+  @media screen and (max-width: 600px) {
+    .contacts__wrap-links, .contacts__wrap-text {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .contacts__button_small {
+      max-width: 7.625rem; /* 122px */
+    }
+  }
+}
